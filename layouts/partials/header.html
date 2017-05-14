@@ -10,6 +10,18 @@
 <meta property="og:type" content="website" />
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+{{/* set default values if no custom ones are defined */}}
+{{ $text := or .Site.Params.font.text "Roboto" }}
+{{ $code := or .Site.Params.font.code "Roboto Mono" }}
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
+<style>
+    body, input {
+    font-family: '{{ $text }}', Helvetica, Arial, sans-serif;
+    }
+    pre, code {
+    font-family: '{{ $code }}', 'Courier New', 'Courier', monospace;
+    }
+</style>
 <link rel="shortcut icon" href="{{ .Site.BaseURL }}/wave.ico">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 {{ with .Site.Params.highlight.style }}

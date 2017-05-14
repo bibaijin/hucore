@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseURL = "https://example.com"
 languageCode = "en"
 title = "Hu | Core"
 theme = "Hucore"
@@ -44,3 +44,7 @@ fa_icon = "fa-rss"
 [[params.socialshare]]
 url = "https://linkedin.com/in/mgjohansen"
 fa_icon = "fa-linkedin-square"
+
+[params.font]
+text = "Ubuntu"
+code = "Ubuntu Mono"

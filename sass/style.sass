@@ -1,7 +1,6 @@
 $blue: #2077b2
 $primary: $blue
 $grey-dark: #42464c
-$family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif
 
 @import "node_modules/bulma/bulma"
 
@@ -37,10 +36,16 @@ nav .level
 
 .subtitle
   color: #69707a
+  padding-top: 1.0rem
+
+.tags
+  margin-top: -1.0rem
+  margin-bottom: 1.5rem
 
 .title
   line-height: 1.25
   font-size: 24px
+  font-weight: bolder
   a
     color: #222324
   &.notfound
@@ -60,7 +65,7 @@ article+article
   h1, h2, h3, h4, h5, h6
     line-height: 1.25
     &:not(:first-child)
-      margin-top: 80px
+      margin-top: 3rem
     &::before
       color: #aeb1b5
       font-weight: bold
@@ -74,26 +79,32 @@ article+article
     margin-top: 20px
   h1
     font-size: 24px
+    font-weight: bolder
     &::before
       content: "# "
   h2
     font-size: 22px
+    font-weight: bold
     &::before
       content: "## "
   h3
     font-size: 20px
+    font-weight: bold
     &::before
       content: "### "
   h4
     font-size: 18px
+    font-weight: bold
     &::before
       content: "#### "
   h5
     font-size: 17px
+    font-weight: bold
     &::before
       content: "##### "
   h6
     font-size: 16px
+    font-weight: bold
     &::before
       content: "###### "
   p,
